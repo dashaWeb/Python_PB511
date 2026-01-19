@@ -257,5 +257,7 @@ print(line)
 
 
 date = '22.03.2026'.split('.')
+date = '22-03-2026'.split('.')
+date = '22/03/2026'.split('.')
 print(date[0])
 

@@ -1,117 +1,79 @@
+#Task 1
+text = input("Введіть текст: ")
+
+count = 0
+for ch in text:
+    if ch == "." or ch == "!" or ch == "?":
+        count += 1
+
+print("Кількість речень - ", count)
+
+#Task 2
+text = input("Введіть рядок: ")
+
+text = text.lower()
+text = text.replace(" ", "")
+
+if text == text[::-1]:
+    print("Паліндром")
+else:
+    print("Не паліндром")
+
+#Task 3
+text = input("Введіть текст: ")
+
+text = text.replace("я", "Я")
+text = text.replace("ти", "ТИ")
+text = text.replace("ми", "МИ")
+text = text.replace("вони", "ВОНИ")
+text = text.replace("кіт", "КІТ")
+
+print(text)
 
 
-while True:
-    choise = int(input(''' Enter a shape variant:
-            [1] - а   [2] - б  [3] - в   [4] - г  [5] - д 
-                                              
-            [6] - е   [7] - ж  [8] - з  [9] - и  [10] - к
-            
-                       [0] - вихід
-                                               
-    '''))
 
-    if choise == 0:
-        break
+#Task 4
+text = input("Введіть рядок: ")
+ch1 = input("Введіть перший символ: ")
+ch2 = input("Введіть другий символ: ")
 
-    line = 7
+pos1 = text.find(ch1)
+pos2 = text.find(ch2)
+
+if pos1 != -1 and pos2 != -1 and pos1 < pos2:
+    result = text[:pos1] + text[pos2 + 1:]
+    print(result)
+else:
+    print("Неможливо виконати")
 
 
-    match choise:
-        case 2:
-            for j in range(1, line + 1):            
-                for i in range(1 , j + 1):
-                    print("*",end=" ")
-                print()
-        case 1:
-            q = 0
-            for j in range(line , 0 , -1):
-                print(' ' * q , end=' ')
-                q += 2
-                for i in range(1 , j + 1):
-                    print('*',end=" ")
-                print() 
+#Task 5
+text = input("Введіть текст: ")
+symbols = input("Введіть набір символів: ")
 
-        case 9:
-            for j in range(line, 0, -1 ):            
-                for i in range( 1, j + 1 ):
-                    print( '*' , end=" ")
-                print() 
+words = text.split()
+result = ""
 
-        case 10:
-            q = line*2 - 2  
-            for j in range(1, line +1):
-                print(' ' * q , end='')
-                q -= 2            
-                for i in range(1, j + 1 ):
-                    print( '*' , end=" ")
-                print()
-        case 7:
-            for j in range(1, line + 1):            
-                if j < (line / 2) + 1 :
-                    for i in range(1 , j + 1):
-                        print("*",end=" ")
-                    print()
-            line = line // 2                   
-            for j in range(line , 0, -1 ):                              
-                for i in range( 1, j + 1 ):
-                    print( '*' , end=" ")
-                print()
+for w in words:
+    delete = False
+    for ch in symbols:
+        if ch in w:
+            delete = True
+    if not delete:
+        result += w + " "
 
-        case 8:
-            q = line*2 - 2  
-            for j in range(1, line +1):
-                if j < (line / 2) + 1 :
-                    print(' ' * q , end='')
-                    q -= 2            
-                    for i in range(1, j + 1 ):
-                        print( '*' , end=" ")
-                    print()                  
-            line = line // 2 
-            q = line * 2 + 1
-            for j in range(line , 0 , -1):
-                print(' ' * q , end=' ')
-                q += 2
-                for i in range(1 , j + 1):
-                    print('*',end=" ")
-                print()
+print(result)
 
-        case 3:
-           q = 0
-           for j in range(line  , 0, -2 ):            
-            print(' ' * q  , end=' ')
-            q += 2
-            for i in range( 1, j + 1  ):
-                
-                print( "*" , end=" ")
-            print()
 
-        case 4:
-            q = line - 1
-            for j in range(1, line +1, 2):
-                print(' ' * q , end='')
-                q -= 2            
-                for i in range(1, j + 1 ):
-                    print( '*' , end=" ")
-                print()
+#Task 6
 
-        case 5:
-            q = 0
-            for j in range(line  , 1, -2 ):            
-                print(' ' * q  , end=' ')
-                q += 2
-                for i in range( 1, j + 1  ):                        
-                    print( "*" , end=" ")
-                print() 
+text = input("Введіть текст: ")
 
-            q = line  
-            for j in range(1, line +1, 2):
-                
-                print(' ' * q , end='')
-                q -= 2            
-                for i in range(1, j + 1 ):
-                    print( '*' , end=" ")
-                print() 
-           
-        # case 6:
+words = text.split()
+words.reverse()
 
-                 
+result = ""
+for w in words:
+    result += w + " "
+
+print(result)

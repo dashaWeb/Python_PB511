@@ -219,12 +219,42 @@ line = 5
 # print('1',end=' ')
 # print()
 
-line = 7
-for i in range(1, line + 1):
-    print(' ' * ((line - i ) * 2), end='')
-    for j in range(1, i + 1):
-        print(j, end=' ')
-    for j in range(i-1, 0, -1):
-        print(j, end=' ')
-    print()
+# line = 7
+# for i in range(1, line + 1):
+#     print(' ' * ((line - i ) * 2), end='')
+#     for j in range(1, i + 1):
+#         print(j, end=' ')
+#     for j in range(i-1, 0, -1):
+#         print(j, end=' ')
+#     print()
 
+
+# a = int(input("Enter number start = "))
+# b = int(input("Enter number end = "))
+
+# if a <= b:
+#     start , end = a , b
+# else:
+#     start , end = b , a
+
+# for i in range(start, end + 1 ):
+    
+#     print(f"Дільники числа {i} - ", end="")
+#     for j in range(1, i + 1 ):
+#         if i % j == 0:
+#             print (j, end=" ")
+#     if i == end:
+#         continue
+#     else:
+#         print(';')
+# print('.')
+
+
+'''
+*      *
+**    **
+***  ***
+********
+
+
+'''
