@@ -181,3 +181,6 @@ print(sorted(marks,reverse=True))
 list_mark = '\n'.join('Mark ' + str(i) for i in marks)
 print(list_mark)
 
+print(marks)
+del marks[0:3]
+print(marks)
