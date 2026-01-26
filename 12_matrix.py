@@ -102,35 +102,54 @@ import random
 # print(f'Min :: {min_} [{min_row},{min_col}]')
 
 
-matrix = [[random.randint(1,20) for i in range(5)] for j in range(3)]
+# matrix = [[random.randint(1,20) for i in range(5)] for j in range(3)]
 
-clone = matrix.copy()
-print('Before copy')
+# clone = matrix.copy()
+# print('Before copy')
 
-for i in range(len(matrix)):
-    print(id(matrix[i]), '\t', id(clone[i]))
+# for i in range(len(matrix)):
+#     print(id(matrix[i]), '\t', id(clone[i]))
 
-for i in range(len(clone)):
-    clone[i] = matrix[i].copy()
+# for i in range(len(clone)):
+#     clone[i] = matrix[i].copy()
 
-print()
+# print()
 
-for i in range(len(matrix)):
-    print(id(matrix[i]), '\t', id(clone[i]))
+# for i in range(len(matrix)):
+#     print(id(matrix[i]), '\t', id(clone[i]))
 
-print(f'Clone  :: {id(clone)}')
-print(f'Origin :: {id(matrix)}')
-clone[0][0] = 333
-print('Origin')
-for row in matrix:
-    for data in row:
-        print(data, end='\t')
-    print()
-print()
+# print(f'Clone  :: {id(clone)}')
+# print(f'Origin :: {id(matrix)}')
+# clone[0][0] = 333
+# print('Origin')
+# for row in matrix:
+#     for data in row:
+#         print(data, end='\t')
+#     print()
+# print()
 
-print('Clone')
-for row in clone:
-    for data in row:
-        print(data, end='\t')
-    print()
+# print('Clone')
+# for row in clone:
+#     for data in row:
+#         print(data, end='\t')
+#     print()
 
+row, col = 3,5
+matr = [[random.randint(1,10) for i in range(col)] for j in range(row)]
+total_sum = 0
+for line in matr:
+    sum_row = 0
+    total_sum+=sum(line)
+    for item in line:
+        print(f'{item}', end='\t')
+        sum_row+=item
+    print(f'| {sum_row}')
+
+print('-'*(col*9))
+
+for i in range(col):
+    sum_col = 0
+    for j in range(row):
+        sum_col+= matr[j][i]
+    print(f'{sum_col}',end='\t')
+print(f'| {total_sum}')
