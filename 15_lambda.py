@@ -94,7 +94,3 @@ print('\n\n','='*50, '\n\n')
 # revMinusList(numbers)
 # printList(numbers)
 
-test_ = ['test','anhhhhbs','HHH',"khhdjd"]
-print(test_)
-test_ = sorted(test_, key= lambda x: len(x))
-print(test_)
