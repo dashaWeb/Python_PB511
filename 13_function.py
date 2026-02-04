@@ -95,4 +95,14 @@ print(f'30.04.2004 --> {nextDate(30,4,2004)}')
 
 
 
+def rem(a, b):
+    res_int = a // b
+    return a - res_int * b
+
+print(f'2 % 5 --> {rem(2,5)}') # 2
+print(f'10 % 5 --> {rem(10,5)}') #0
+print(f'8 % 5 --> {rem(8,5)}') #3
+
+
+
 
