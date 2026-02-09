@@ -56,3 +56,7 @@ url = r"C:\Users\kap19\Desktop\test.txt"
 
 # with open(r'16_files/my_app_ua.txt', 'r', encoding='utf-8') as file:
 #     print(file.read())
+import os
+
+print(os.path.exists('test.txt'))
+print(os.path.exists('16_files/my_app.txt'))
